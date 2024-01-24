@@ -1,0 +1,280 @@
+<html>
+
+<head>
+    <title>hello</title>
+  <link type="text/css" rel="stylesheet" href="style3.css" />
+<body>
+    <style>
+        .design {
+           
+            margin: auto;
+            width: 50%;
+            height:auto;
+
+            float: left;
+
+
+           
+            
+        }
+
+        .sub {
+            border-radius: 100px;
+            height: 25px;
+            width: 100px;
+            border-color: white;
+            background-color:black;
+            color: white;
+        }
+
+        .sub:hover {
+            cursor: pointer;
+            transition-duration: 500ms;
+            transform: scale(1.1);
+        }
+
+        .answer {
+            border-radius: 25px;
+
+            width: 10%;
+            float: right;
+
+            border: 5px inset rgb(0, 0, 0);
+            border-color: gold;
+            background-color: black;
+
+            justify-content: center;
+            align-items: center;
+
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        ::placeholder {
+            color: black;;
+            opacity: 1;
+            
+        }
+
+        :-ms-input-placeholder {
+            
+            color: black;
+        }
+
+        ::-ms-input-placeholder {
+            
+            color:black;
+        }
+
+        
+    </style>
+    </head>
+
+    <body>
+
+
+        <section id="video-par">
+            <video id="my-video" autoplay muted loop>
+                <source type="video/mp4" src="curency.mp4" controls="" />
+            </video>
+        
+        <div class="design">
+            <form name="f1">
+                <h1 align="center"><b><u>
+                            <font size="35" color="white">Total Chalan Count</font>
+                        </u></b></h1>
+                <h1 align="center"><b><u>
+                            <font size="2" color="black">Note:-Please enter 0 if a note of any particular denomination
+                                is not available.</font>
+                        </u></b></font>
+                </h1>
+                <p align="center">
+                    <font size="4" color="white">
+                        Enter Count of 2000:-
+                        <input type="text" placeholder="count" id="first" required>
+                    </font>
+                </p>
+                <p align="center">
+                    <font size="4" color="white">Enter Count of 500:-
+                        <input type="text" placeholder="count" id="second" required>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 200:-
+                                <input type="text" placeholder="count" id="third" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 100:-
+                                <input type="text" placeholder="count" id="fourth" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 50:-
+                                <input type="text" placeholder="count" id="fifth" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 20:-
+                                <input type="text" placeholder="count" id="sixth" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 10:-
+                                <input type="text" placeholder="count" id="seventh" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 5:-
+                                <input type="text" placeholder="count" id="eight" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 2:-
+                                <input type="text" placeholder="count" id="ninth" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="4" color="white"> Enter Count of 1:-
+                                <input type="text" placeholder="count" id="tenth" required>
+                            </font>
+                        </p>
+                        <p align="center">
+                            <font size="5" color="white">Total:-
+                                <input type="text" placeholder="total" id="s">
+                            </font>
+                        </p>
+
+                        <p align="center"><input type="button" class="sub" onclick="callall()" value="Count" />
+                            <input type="reset" class="sub" onclick="reset" value="Reset" />
+                            <input type="button" class="sub" onclick="total()" value="Sum" />
+                        </p>
+        </div>
+
+        <div class="answer">
+            <ol>
+                <li id="pa"></li>
+                <li id="pb"></li>
+                <li id="pc"></li>
+                <li id="pd"></li>
+                <li id="pe"></li>
+                <li id="pf"></li>
+                <li id="pg"></li>
+                <li id="ph"></li>
+                <li id="pi"></li>
+                <li id="pj"></li>
+
+            </ol>
+        </div>
+        </section>
+
+    </body>
+
+    <script>
+        var sum = 0;
+        function callall() {
+            counta();
+            countb();
+            countc();
+            countd();
+            counte();
+            countf();
+            countg();
+            counth();
+            counti();
+            countj();
+
+        }
+        function counta() {
+
+
+            amount = parseInt(document.getElementById("first").value);
+            a = amount * 2000;
+            document.getElementById('pa').innerHTML = a;
+            sum = sum + a;
+        }
+
+
+        function countb() {
+
+
+            amount = parseInt(document.getElementById("second").value);
+            b = amount * 500;
+
+            document.getElementById('pb').innerHTML = b;
+            sum = sum + b;
+
+        }
+        function countc() {
+
+
+            amount = parseInt(document.getElementById("third").value);
+            c = amount * 200;
+            document.getElementById('pc').innerHTML = c;
+            sum = sum + c;
+
+        }
+        function countd() {
+
+
+            amount = parseInt(document.getElementById("fourth").value);
+            d = amount * 100;
+            document.getElementById('pd').innerHTML = d;
+            sum = sum + d;
+        }
+        function counte() {
+
+
+            amount = parseInt(document.getElementById("fifth").value);
+            e = amount * 50;
+            document.getElementById('pe').innerHTML = e;
+            sum = sum + e;
+        }
+        function countf() {
+
+
+            amount = parseInt(document.getElementById("sixth").value);
+            f = amount * 20;
+            document.getElementById('pf').innerHTML = f;
+            sum = sum + f;
+        }
+        function countg() {
+
+
+            amount = parseInt(document.getElementById("seventh").value);
+            g = amount * 10;
+            document.getElementById('pg').innerHTML = g;
+            sum = sum + g;
+        }
+        function counth() {
+
+
+            amount = parseInt(document.getElementById("eight").value);
+            h = amount * 5;
+            document.getElementById('ph').innerHTML = h;
+            sum = sum + h;
+
+        } function counti() {
+
+
+            amount = parseInt(document.getElementById("ninth").value);
+            i = amount * 2;
+            document.getElementById('pi').innerHTML = i;
+            sum = sum + i;
+        }
+        function countj() {
+
+
+            amount = parseInt(document.getElementById("tenth").value);
+            j = amount * 1;
+            document.getElementById('pj').innerHTML = j;
+            sum = sum + j;
+
+        }
+        function total() {
+            document.forms["f1"]['s'].value = sum;
+        }
+
+    </script>
+
+</html>
